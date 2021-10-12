@@ -63,7 +63,7 @@ class _WeatherNightStarBgState extends State<WeatherNightStarBg>
     _controller =
         AnimationController(duration: Duration(seconds: 5), vsync: this);
     _controller.addListener(() {
-      setState(() {});
+      if (mounted) setState(() {});
     });
     super.initState();
   }
@@ -77,9 +77,11 @@ class _WeatherNightStarBgState extends State<WeatherNightStarBg>
   Widget _buildWidget() {
     if (_starParams.isNotEmpty &&
         widget.weatherType == WeatherType.sunnyNight) {
-      return CustomPaint(
-        painter:
-            _StarPainter(_starParams, _meteorParams, width, height, widthRatio),
+      return RepaintBoundary(
+        child: CustomPaint(
+          painter: _StarPainter(
+              _starParams, _meteorParams, width, height, widthRatio),
+        ),
       );
     } else {
       return Container();
