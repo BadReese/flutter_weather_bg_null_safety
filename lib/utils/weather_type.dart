@@ -73,17 +73,17 @@ class WeatherUtil {
       case WeatherType.thunder:
         return [Color(0xFF3B434E), Color(0xFF565D66)];
       case WeatherType.hazy:
-        return [Color(0xFF989898), Color(0xFF4B4B4B)];
+        return [Color(0xFF4B4B4B), Color(0xFF989898)];
       case WeatherType.foggy:
-        return [Color(0xFFA6B3C2), Color(0xFF737F88)];
+        return [Color(0xFF737F88), Color(0xFFA6B3C2)];
       case WeatherType.lightSnow:
         return [Color(0xFF6989BA), Color(0xFF9DB0CE)];
       case WeatherType.middleSnow:
-        return [Color(0xFF8595AD), Color(0xFF95A4BF)];
+        return [Color(0xFF8193AF), Color(0xFF95A4BF)];
       case WeatherType.heavySnow:
-        return [Color(0xFF98A2BC), Color(0xFFA7ADBF)];
+        return [Color(0xFF8995B6), Color(0xFFA7ADBF)];
       case WeatherType.dusty:
-        return [Color(0xFFB99D79), Color(0xFF6C5635)];
+        return [Color(0xFFBF9447), Color(0xFFEDBA66)];
       default:
         return [Color(0xFF0071D1), Color(0xFF6DA6E4)];
     }
