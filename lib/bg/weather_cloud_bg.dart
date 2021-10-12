@@ -128,14 +128,17 @@ class BgPainter extends CustomPainter {
     canvas.save();
     final sunScale = 1.2 * widthRatio;
     canvas.scale(sunScale, sunScale);
-    var offset = Offset(width.toDouble() - image1.width.toDouble() * sunScale,
-        -image1.width.toDouble() / 2);
+    var finalWidth = image1.width.toDouble() * sunScale;
+    var offset =
+        Offset(width.toDouble() - finalWidth, -image1.width.toDouble() / 3);
+    // var offset = Offset(width.toDouble() - image1.width.toDouble() * sunScale,
+    //     -image1.width.toDouble() / 2);
     canvas.drawImage(image1, offset, _paint);
     canvas.restore();
 
     canvas.save();
     final scale = 0.6 * widthRatio;
-    ui.Offset offset1 = ui.Offset(-100, -100);
+    ui.Offset offset1 = ui.Offset(-50, -50);
     canvas.scale(scale);
     canvas.drawImage(image, offset1, _paint);
     canvas.restore();
