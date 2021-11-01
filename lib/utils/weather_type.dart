@@ -54,6 +54,7 @@ class WeatherUtil {
 
   // 根据天气类型获取背景的颜色值
   static List<Color> getColor(WeatherType weatherType) {
+    return [Color(0x000070D1), Color(0x000070D1)];
     switch (weatherType) {
       case WeatherType.sunny:
         return [Color(0xFF0071D1), Color(0xFF6DA6E4)];

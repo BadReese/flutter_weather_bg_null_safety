@@ -44,12 +44,12 @@ class _WeatherNightStarBgState extends State<WeatherNightStarBg>
 
   /// 初始化星星参数
   void initStarParams() {
-    for (int i = 0; i < 100; i++) {
-      var index = Random().nextInt(2);
-      _StarParam _starParam = _StarParam(index);
-      _starParam.init(width, height, widthRatio);
-      _starParams.add(_starParam);
-    }
+    // for (int i = 0; i < 100; i++) {
+    //   var index = Random().nextInt(2);
+    //   _StarParam _starParam = _StarParam(index);
+    //   _starParam.init(width, height, widthRatio);
+    //   _starParams.add(_starParam);
+    // }
     for (int i = 0; i < 4; i++) {
       _MeteorParam param = _MeteorParam();
       param.init(width, height, widthRatio);
@@ -75,8 +75,7 @@ class _WeatherNightStarBgState extends State<WeatherNightStarBg>
   }
 
   Widget _buildWidget() {
-    if (_starParams.isNotEmpty &&
-        widget.weatherType == WeatherType.sunnyNight) {
+    if (widget.weatherType == WeatherType.sunnyNight) {
       return RepaintBoundary(
         child: CustomPaint(
           painter: _StarPainter(
